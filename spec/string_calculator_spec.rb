@@ -13,6 +13,10 @@ RSpec.describe StringCalculator::Calculator do
       it "return number for single number" do
         expect(calculator.add("1")).to eq(1)
       end
+
+      it "return sum of 2 numbers" do
+        expect(calculator.add("1, 3")).to eq(4)
+      end
     end
   end
 end
