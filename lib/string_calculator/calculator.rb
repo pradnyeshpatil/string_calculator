@@ -4,6 +4,11 @@ module StringCalculator
       if input == ''
         return 0
       end
+      sum = 0 
+      input.split(',').each do  |n|
+        sum = sum + n.to_i
+      end
+      return sum
     end
   end
 end
