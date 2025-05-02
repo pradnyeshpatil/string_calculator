@@ -5,6 +5,7 @@ module StringCalculator
         return 0
       end
       sum = 0 
+      input = input.gsub('\\n', "\n").gsub("\n", ',')
       input.split(',').each do  |n|
         sum = sum + n.to_i
       end

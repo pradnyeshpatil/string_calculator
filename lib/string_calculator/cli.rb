@@ -16,8 +16,13 @@ end
 
 
 if __FILE__ == $0
-  puts "Enter string of numbers to add:"
-  input = gets.chomp
+  puts "Enter numbers (type \\n for newline or press Enter twice to end):"
+  lines = []
+  while (line = gets.chomp)
+    break if line.empty?
+    lines << line
+  end
+  input = lines.join("\n")
   cli = StringCalculator::CLI.new
   cli.add(input)
 end
