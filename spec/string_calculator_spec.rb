@@ -1,9 +1,14 @@
-RSpec.describe StringCalculator do
-  it "has a version number" do
-    expect(StringCalculator::VERSION).not_to be nil
-  end
+require "spec_helper"
+require "string_calculator/calculator"
 
-  it "does something useful" do
-    expect(false).to eq(true)
+RSpec.describe StringCalculator::Calculator do
+  describe "String Calculator" do
+    let(:calculator) { described_class.new }
+
+    context "#add action" do
+      it "return 0 when empty string is pass" do
+        expect(calculator.add("")).to eq(0)
+      end
+    end
   end
 end

@@ -1,7 +1,9 @@
 module StringCalculator
   class Calculator
     def add(input)
-      return "hello!!, Calling from thor."
+      if input == ''
+        return 0
+      end
     end
   end
 end
