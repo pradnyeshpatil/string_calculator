@@ -21,6 +21,7 @@ module StringCalculator
       end
 
       numbers.each do  |n|
+        next if n.to_i > 1000
         sum = sum + n.to_i
       end
       return sum
