@@ -1,28 +1,28 @@
-# StringCalculator
+# String Calculator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/string_calculator`. To experiment with that code, run `bin/console` for an interactive prompt.
+A simple Ruby project that demonstrates test-driven development (TDD) by implementing a string calculator. This calculator supports custom delimiters, handles edge cases like negative numbers, and provides CLI interaction using Thor.
 
-TODO: Delete this and the text above, and describe your gem
+## Features
 
-## Installation
+- Adds numbers from a string input
+- Supports default delimiters: `,` and `\n`
+- Throws an exception for negative numbers (e.g., `Negative numbers not allowed: -1,-5`)
+- Command-line interface with Thor
 
-Add this line to your application's Gemfile:
+## Getting Started
 
-```ruby
-gem 'string_calculator'
-```
+### Prerequisites
 
-And then execute:
+- Ruby (version 2.6 or higher recommended)
+- Bundler (for managing gems)
 
-    $ bundle install
+### Installation
 
-Or install it yourself as:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/string_calculator.git
+   cd string_calculator
 
-    $ gem install string_calculator
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
