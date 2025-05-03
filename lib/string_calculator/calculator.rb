@@ -15,6 +15,11 @@ module StringCalculator
 
       numbers = numbers_string.split(delimiter).map(&:to_i)
 
+      negatives = numbers.select { |n| n < 0 }
+      unless negatives.empty?
+        raise "Negative numbers not allowed: #{negatives.join(',')}"
+      end
+
       numbers.each do  |n|
         sum = sum + n.to_i
       end
