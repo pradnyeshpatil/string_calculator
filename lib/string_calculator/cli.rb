@@ -16,10 +16,9 @@ end
 
 
 if __FILE__ == $0
-  puts "Enter numbers (type \\n for newline or press Enter twice to end):"
+  puts "Enter input (type Enter twice to submit):"
   lines = []
-  while (line = gets.chomp)
-    break if line.empty?
+  while (line = gets.chomp) && !line.empty?
     lines << line
   end
   input = lines.join("\n")

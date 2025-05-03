@@ -1,12 +1,21 @@
 module StringCalculator
   class Calculator
     def add(input)
-      if input == ''
-        return 0
+      input = input.gsub('\\n', "\n")
+      return 0 if input == ''
+      sum = 0
+      delimiter = /[,\n]/
+      numbers_string = input
+
+      if input.start_with?('//')
+        delimiter_line, numbers_string = input.split("\n", 2)
+        custom_delimiter = delimiter_line[2..-1]
+        delimiter = Regexp.new(Regexp.escape(custom_delimiter))
       end
-      sum = 0 
-      input = input.gsub('\\n', "\n").gsub("\n", ',')
-      input.split(',').each do  |n|
+
+      numbers = numbers_string.split(delimiter).map(&:to_i)
+
+      numbers.each do  |n|
         sum = sum + n.to_i
       end
       return sum
